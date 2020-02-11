@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  profiles:
+    - dev, pro, test
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: 'create-drop'
+  flyway:
+    locations:
+      - classpath:/db/migration
